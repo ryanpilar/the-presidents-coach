@@ -56,7 +56,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <HelmetProvider>
-    <BrowserRouter>
+    <BrowserRouter basename="/">
       <Switch>
         <Route path="/" exact render={(props) => <Home {...props} />} />
         <Route path="/media" exact render={(props) => <Media {...props} />} />
