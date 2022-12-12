@@ -59,13 +59,13 @@ function Home() {
     return body;
   };
 
-  React.useEffect(() => {
-    callBackendAPI()
-      .then(res => console.log('res', res))
-      // .then(data => console.log('data', data))
-      // .then(res => setAppData({ data: res.express }))
-      .catch(err => console.log(err));
-  }, [])
+  // React.useEffect(() => {
+  //   callBackendAPI()
+  //     .then(res => console.log('res', res))
+  //     // .then(data => console.log('data', data))
+  //     // .then(res => setAppData({ data: res.express }))
+  //     .catch(err => console.log(err));
+  // }, [])
 
   React.useEffect(() => {
     document.body.classList.add("presentation-page");
