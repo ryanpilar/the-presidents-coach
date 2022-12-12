@@ -1,0 +1,8 @@
+NODE Version Needed: 16.13.0
+
+Weird things I had to do:
+    
+    -   WATCH - did not work out of the box, peer dependency issues with react-datetime
+        and react-google-maps": "9.4.5". 
+    -   WATCH - i updated react-datetime in package-json, and then forced install on 
+        react-google-maps: npm install --legacy-peer-deps 
