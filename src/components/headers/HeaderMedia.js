@@ -19,7 +19,7 @@ import {
 import DemoFooter from "components/footers/DemoFooter.js";
 import ProfileCardMedia from "components/cards/ProfileCardMedia.js";
 
-// Core Components
+
 
 function HeaderMedia() {
 

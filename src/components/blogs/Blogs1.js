@@ -17,6 +17,7 @@ import { createClient } from "contentful";
 function Blogs1() {
   const [mediaList, setMediaList] = React.useState([]);
   const [correctSize, setCorrectSize] = React.useState(null);
+  
 
   // Contentful Connect
   const client = createClient({
@@ -86,6 +87,8 @@ function Blogs1() {
 
     getAllEntries();
   }, []);
+
+
 
   return (
     <>

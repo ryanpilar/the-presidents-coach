@@ -5,9 +5,37 @@ import { Button, Card, Row, Col } from "reactstrap";
 
 import ModalCoontactForm from "components/modals/ModalContactForm";
 
-// Core Components
+import { createClient } from "contentful";
 
 function ProfileCardMedia() {
+
+  const [instagramStats, setInstagramStats] = React.useState(null)
+  // Contentful Connect
+  const client = createClient({
+    space: process.env.REACT_APP_CONTENTFUL_SPACE,
+    accessToken: process.env.REACT_APP_CONTENTFUL_TOKEN,
+  });
+  React.useEffect(() => {
+    const getAllEntries = async () => {
+      // contentful get data
+      try {
+        await client
+          .getEntries({ content_type: "instagramStats" })
+          .then((allEntries) => {
+            
+            // console.log('updated', updated)
+            setInstagramStats(allEntries.items[0].fields);
+          });
+      } catch (error) {
+        console.log(
+          "this error arose from the client.getEntries() call to contentful"
+        );
+      }
+    };
+  
+    getAllEntries();
+  }, []);
+
   return (
     <>
       <Card className="card-profile shadow mt--300">
@@ -60,38 +88,37 @@ function ProfileCardMedia() {
                     
                 </div> */}
                 <div>
-                  <span className="heading">1,254</span>
-                  <span className="description">Friends</span>
+                  <span className="heading">
+                  { instagramStats && 
+                    instagramStats.friends
+                  }
+                  
+                  </span>
+                  <span className="description">
+                  Friends</span>
                 </div>
                 <div>
-                  <span className="heading">383</span>
+                  <span className="heading">
+                  { instagramStats && 
+                    instagramStats.posts
+                  }
+                  
+                  </span>
                   <span className="description">Posts</span>
                 </div>
                 <div>
-                  <span className="heading">424</span>
+                  <span className="heading">
+                  { instagramStats && 
+                    instagramStats.following
+                  }
+                  
+                  </span>
                   <span className="description">Following</span>
                 </div>
               </div>
             </Col>
           </Row>
-          {/* <div className="text-center mt-5">
-            <h3>
-              Jessica Jones
-              <span className="font-weight-light">, 27</span>
-            </h3>
-            <div className="h6 font-weight-300">
-              <i className="ni location_pin mr-2"></i>
-              Bucharest, Romania
-            </div>
-            <div className="h6 mt-4">
-              <i className="ni business_briefcase-24 mr-2"></i>
-              Solution Manager - Creative Tim Officer
-            </div>
-            <div>
-              <i className="ni education_hat mr-2"></i>
-              University of Computer Science
-            </div>
-          </div> */}
+
           <div className="mt-5 py-5 border-top text-center">
             <Row className="justify-content-center">
               <Col lg="9">
