@@ -10,6 +10,8 @@ import {
   Col,
 } from "reactstrap";
 
+import { NavLink } from 'react-router-dom'
+
 import { createClient } from "contentful";
 
 function Blogs1() {
@@ -119,7 +121,20 @@ function Blogs1() {
                             ")",
                         }}
                       ></div>
-                      <a href={`/media/${mediaPost.itemData.sys.id}`}>
+                      <NavLink to={`/media/${mediaPost.itemData.sys.id}`}>
+                      <CardBody>
+                          <div className="content-bottom">
+                            <h6 className="card-category text-white opacity-8">
+                              {mediaPost.itemData.fields.date}
+                            </h6>
+                            <CardTitle tag="h5">
+                              {mediaPost.itemData.fields.title}
+                            </CardTitle>
+                          </div>
+                        </CardBody>
+
+                      </NavLink>
+                      {/* <a href={`/media/${mediaPost.itemData.sys.id}`}>
                         <CardBody>
                           <div className="content-bottom">
                             <h6 className="card-category text-white opacity-8">
@@ -130,7 +145,7 @@ function Blogs1() {
                             </CardTitle>
                           </div>
                         </CardBody>
-                      </a>
+                      </a> */}
                     </Card>
                   </Col>
                 );

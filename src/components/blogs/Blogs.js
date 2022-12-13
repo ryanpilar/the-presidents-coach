@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from 'react-router-dom';
 
 // reactstrap components
 import { Card, CardBody, CardTitle, Container, Row, Col } from "reactstrap";
@@ -91,7 +92,7 @@ function Blogs() {
                       "url(" + require("assets/img/sections/ashim.jpg") + ")",
                   }}
                 ></div>
-                <a href="/media/3c9XLwzmbcNvQQcHX6WjqC">
+                <NavLink to={`/media/3c9XLwzmbcNvQQcHX6WjqC`}>
                   <CardBody>
                     <div className="content-bottom">
                       <h6 className="card-category text-white opacity-8">
@@ -102,7 +103,7 @@ function Blogs() {
                       </CardTitle>
                     </div>
                   </CardBody>
-                </a>
+                  </NavLink>
               </Card>
             </Col>
 
@@ -129,7 +130,7 @@ function Blogs() {
                       ")",
                   }}
                 ></div>
-                <a href="/media/6TxUHGT3ouyd8ItJDOwLeW">
+                <NavLink to={`/media/6TxUHGT3ouyd8ItJDOwLeW`}>
                   <CardBody>
                     <div className="content-bottom">
                       <h6 className="card-category text-white opacity-8">
@@ -138,7 +139,7 @@ function Blogs() {
                       <CardTitle tag="h5">Peace of Mind Paradise </CardTitle>
                     </div>
                   </CardBody>
-                </a>
+                  </NavLink>
               </Card>
             </Col>
           </Row>
