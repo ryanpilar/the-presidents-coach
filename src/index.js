@@ -47,6 +47,7 @@ import ResetPage from "views/examples/ResetPage.js";
 
 
 import { HelmetProvider } from "react-helmet-async";
+import NotFound from "components/errors/NotFound";
 // require("./App.js")
 // const express = require('express')
 // const app = express()
@@ -56,16 +57,15 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <HelmetProvider>
-    <BrowserRouter basename="/">
+    <BrowserRouter>
       <Switch>
-        {/* <Route path="/" exact render={(props) => <Home {...props} />} /> */}
-        <Route path='/' exact component={(props) => <Home {...props} />} />
-        <Route path="/media" exact component={(props) => <Media {...props} />} />
+        <Route path="/" exact render={(props) => <Home {...props} />} />
+        <Route path="/media" exact render={(props) => <Media {...props} />} />
 
         <Route
           path="/media/:id"
           exact
-          component={(props) => <MediaPost {...props} />}
+          render={(props) => <MediaPost {...props} />}
         />
         {/* <Route
           path="/coaching"
@@ -75,17 +75,17 @@ root.render(
         <Route
           path="/coaching"
           exact
-          component={(props) => <Coaching {...props} />}
+          render={(props) => <Coaching {...props} />}
         />
         <Route
           path="/coaching/:color"
           exact
-          component={(props) => <Coaching {...props} />}
+          render={(props) => <Coaching {...props} />}
         />
         <Route
           path="/media-post"
           exact
-          component={(props) => <MediaPost {...props} />}
+          render={(props) => <MediaPost {...props} />}
         />
 
         <Route path="/index" exact render={(props) => <Index {...props} />} />
@@ -190,9 +190,14 @@ root.render(
           exact
           render={(props) => <ResetPage {...props} />}
         />
+<Route path="/notfound" exact render={(props) => <NotFound {...props} />} />
+        <Route path="/:color" exact render={(props) => <Home {...props} />} />
+        <Route path='*'>
+          <NotFound />
+        </Route>
+        
 
-        <Route path="/:color" exact component={(props) => <Home {...props} />} />
-        <Redirect to="/" />
+        <Redirect to="/presentation" />
       </Switch>
     </BrowserRouter>
   </HelmetProvider>
