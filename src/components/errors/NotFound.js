@@ -145,10 +145,10 @@ function NotFound() {
 
       {/* SEO w/ React Helmet */}
       <SEO
-        title={`The President's Coach | Coaching on another level`}
+        title={`The President's Coach | 404 Error, Ooops!`}
         // title={`Curated Coaching Programs`}
         description={
-          "Three fantastic coaching experiences focused on professionals looking to increase their productivity of life. Learn to be a better you with the President's Coach"
+          "Mitch is an award winning executive coach"
         }
       />
         

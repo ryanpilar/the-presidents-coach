@@ -9,7 +9,7 @@ import HeaderMediaPost from "components/headers/HeaderMediaPost.js";
 import NavBarMain from "components/navbars/NavBarMain.js";
 
 import { createClient } from "contentful";
-import { useParams } from "react-router-dom"; // useParams allows the '/post/:id' to work
+import { NavLink, useParams } from "react-router-dom"; // useParams allows the '/post/:id' to work
 
 // import { EmailShareButton, FacebookShareButton, LinkedinShareButton, TwitterShareButton } from "react-share";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
@@ -131,33 +131,86 @@ function MediaPost() {
             showIntroText={mediaPost.showIntroText}
           />
         )}
-
-        <section className="section">
+{/* <Container>
+<Row>
+              <Col className="mx-auto" md="8">Home / Media / {id}</Col>
+            </Row>
+</Container> */}
+        <section className="section mb-0 pb-0">
           <Container>
+            
+
             <Row>
               <Col className="mx-auto" md="8">
                 {!mediaPost.showIntroText && (
-                  <div className="text-right mb-4">
-                    <div>
-                      {/* <h6 className='text-right text-primary'>by: {mediaPost.author}</h6> */}
-                      <Badge pill color="secondary" className="badge-lg">
-                        {mediaPost.date}
-                      </Badge>{" "}
-                      {/* <Badge pill color="secondary">{mediaPost.author}</Badge>{" "} */}
-                    </div>
-                    <div>
-                      <span className="h6 text-light">by </span>{" "}
-                      <span className="h6 text-light">{mediaPost.author}</span>
-                      {/* <Badge pill color="secondary">{mediaPost.date}</Badge>{" "} */}
-                      {/* <Badge pill color="primary">{mediaPost.author}</Badge>{" "} */}
-                    </div>
-                  </div>
+                  <Row>
+                    <Col md="6"></Col>
+                    <Col md="6">
+                      <div className="text-right mb-4">
+                        <div>
+                          <Badge pill color="secondary" className="badge-lg">
+                            {mediaPost.date}
+                          </Badge>{" "}
+                          {/* <Badge pill color="secondary">{mediaPost.author}</Badge>{" "} */}
+                        </div>
+                        <div>
+                          <span className="h6 text-light">by </span>{" "}
+                          <span className="h6 text-light">
+                            {mediaPost.author}
+                          </span>
+                          {/* <Badge pill color="secondary">{mediaPost.date}</Badge>{" "} */}
+                          {/* <Badge pill color="primary">{mediaPost.author}</Badge>{" "} */}
+                        </div>
+                      </div>
+                    </Col>
+                  </Row>
                 )}
 
                 {mediaPost.bodyTextStart &&
                   richTextConversion(mediaPost.bodyTextStart)}
               </Col>
-              <Col className="mx-auto text-right" md="8">
+              {/* <Col className="mx-auto text-right" md="8">
+                <Badge pill color="secondary" className="badge-lg mb-2">
+                  Share This Post<i className="fa fa-arrow-down pl-1"></i>
+                </Badge>{" "}
+                <SocialLinksMediaPost
+                  id={id}
+                  className="border-bottom"
+                  facebookHashtag={"thepresidentscoach"}
+                  facebookQuote={mediaPost.metaDescription}
+                  twitterTitle={mediaPost.title}
+                  twitterHashtag={"thepresidentscoach"}
+                  linkedinTitle={mediaPost.title}
+                  linkedinSummary={mediaPost.metaDescription}
+                  emailSubject={mediaPost.title}
+                />
+              </Col> */}
+            </Row>
+          </Container>
+        </section>
+
+        <section>
+          {mediaPost.showImgCarousel && imageCarousel && (
+            <Row>
+              <Col>
+                <MediaPostCarousel imageCarousel={imageCarousel} />
+              </Col>
+            </Row>
+          )}
+        </section>
+
+        <section className="section mt-0  pt-0">
+          <Container>
+            <Row>
+              <Col className="mx-auto" md="8">
+                {mediaPost.bodyTextEnd && (
+                  <>
+                    {richTextConversion(mediaPost.bodyTextEnd)}
+                    {/* {console.log(mediaPost.bodyTextEnd)} */}
+                  </>
+                )}
+              </Col>
+              <Col className="mx-auto text-right mt-0" md="8">
                 <Badge pill color="secondary" className="badge-lg mb-2">
                   Share This Post<i className="fa fa-arrow-down pl-1"></i>
                 </Badge>{" "}
@@ -173,31 +226,6 @@ function MediaPost() {
                   emailSubject={mediaPost.title}
                 />
                 {/* <h3 className="border-bottom mt-5"></h3> */}
-              </Col>
-            </Row>
-          </Container>
-        </section>
-
-        <section>
-          {mediaPost.showImgCarousel && imageCarousel && (
-            <Row>
-              <Col>
-                <MediaPostCarousel imageCarousel={imageCarousel} />
-              </Col>
-            </Row>
-          )}
-        </section>
-
-        <section className="section mt-5">
-          <Container>
-            <Row>
-              <Col className="mx-auto" md="8">
-                {mediaPost.bodyTextEnd && (
-                  <>
-                    {richTextConversion(mediaPost.bodyTextEnd)}
-                    {/* {console.log(mediaPost.bodyTextEnd)} */}
-                  </>
-                )}
               </Col>
             </Row>
           </Container>
