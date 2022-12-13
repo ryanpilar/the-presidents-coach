@@ -72,7 +72,7 @@ class ModalSocialCard extends React.Component {
             </Button>
 
             <Button href='https://www.instagram.com/thepresidentscoach/' target='_blank' color="primary" type="button" >
-              <i class="fab fa-instagram mr-2"></i>Follow Me
+              <i className="fab fa-instagram mr-2"></i>Follow Me
             </Button>
           </div>
 

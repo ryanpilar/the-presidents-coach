@@ -107,6 +107,11 @@ function MediaPost() {
     getEntryById();
   }, []);
 
+  React.useEffect(() => {
+    // 👇️ scroll to top on page load
+    window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+  }, []);
+
   return (
     <>
       {mediaPost && (
@@ -199,7 +204,7 @@ function MediaPost() {
           )}
         </section>
 
-        <section className="section mt-0  pt-0">
+        <section className="section mt-5 pt-4">
           <Container>
             <Row>
               <Col className="mx-auto" md="8">
