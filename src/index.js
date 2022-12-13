@@ -58,13 +58,14 @@ root.render(
   <HelmetProvider>
     <BrowserRouter basename="/">
       <Switch>
-        <Route path="/" exact render={(props) => <Home {...props} />} />
-        <Route path="/media" exact render={(props) => <Media {...props} />} />
+        {/* <Route path="/" exact render={(props) => <Home {...props} />} /> */}
+        <Route path='/' exact component={(props) => <Home {...props} />} />
+        <Route path="/media" exact component={(props) => <Media {...props} />} />
 
         <Route
           path="/media/:id"
           exact
-          render={(props) => <MediaPost {...props} />}
+          component={(props) => <MediaPost {...props} />}
         />
         {/* <Route
           path="/coaching"
@@ -74,17 +75,17 @@ root.render(
         <Route
           path="/coaching"
           exact
-          render={(props) => <Coaching {...props} />}
+          component={(props) => <Coaching {...props} />}
         />
         <Route
           path="/coaching/:color"
           exact
-          render={(props) => <Coaching {...props} />}
+          component={(props) => <Coaching {...props} />}
         />
         <Route
           path="/media-post"
           exact
-          render={(props) => <MediaPost {...props} />}
+          component={(props) => <MediaPost {...props} />}
         />
 
         <Route path="/index" exact render={(props) => <Index {...props} />} />
@@ -190,8 +191,8 @@ root.render(
           render={(props) => <ResetPage {...props} />}
         />
 
-        <Route path="/:color" exact render={(props) => <Home {...props} />} />
-        <Redirect to="/presentation" />
+        <Route path="/:color" exact component={(props) => <Home {...props} />} />
+        <Redirect to="/" />
       </Switch>
     </BrowserRouter>
   </HelmetProvider>
