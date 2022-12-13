@@ -11,7 +11,7 @@ import {
 const SocialLinksMediaPost = ({ id, showToast, facebookHashtag, facebookQuote, twitterTitle, twitterHashtag, linkedinTitle, linkedinSummary, emailSubject }) => {
   const [toastBoolean, setToastBoolean] = React.useState(false)
 
-  const blogRoute = `http://localhost:3000/media/${id}`;
+  const blogRoute = `http://the-presidents-coach.netlify.app/media/${id}`;
 
   const toggleToast = () => {
     setToastBoolean( preValue => !preValue)
