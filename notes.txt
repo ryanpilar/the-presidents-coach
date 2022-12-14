@@ -6,3 +6,6 @@ Weird things I had to do:
         and react-google-maps": "9.4.5". 
     -   WATCH - i updated react-datetime in package-json, and then forced install on 
         react-google-maps: npm install --legacy-peer-deps 
+
+Dont Forget about:
+    1. setting up a server and then also setting up in the json file "proxy": "http://localhost:5000/",

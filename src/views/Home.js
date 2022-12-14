@@ -41,14 +41,14 @@ function Home() {
     }
   };
 
-  const [appData, setAppData] = React.useState(null)
+  const [appData, setAppData] = React.useState(null);
 
   // const callBackendAPI = async () => {
   //   const response = await fetch('/app');
   //   const body = await response.json();
 
   //   if (response.status !== 200) {
-  //     throw Error(body.message) 
+  //     throw Error(body.message)
   //   }
   //   return body;
   // };
@@ -80,7 +80,7 @@ function Home() {
   });
   return (
     <>
-      {appData && console.log('appData', appData)}
+      {appData && console.log("appData", appData)}
       {/* SEO w/ React Helmet */}
       <SEO
         title={`The President's Coach | helping professionals find their peace`}
@@ -94,16 +94,45 @@ function Home() {
 
         <NavBarMain type="primary" />
         <div className="wrapper">
-          <Header />
-          {/* <Header1 /> */}
-          {/* <Feature6 /> */}
+
+          <Header
+            bgImg={
+              "https://res.cloudinary.com/ryan-pilar/image/upload/q_auto/v1671047439/presidents-coach/headers/mitch-portrait-color_pkcwin-min_hbzgfi.png"
+            }
+            profileImg={
+"https://res.cloudinary.com/ryan-pilar/image/upload/q_auto/v1671045203/presidents-coach/profile/mitch-mugshot-min_uaudge.jpg"            }
+          />
 
           <Feature7 />
-          <Team1 />
+
+          <Team1
+            miscImg1={
+              "https://res.cloudinary.com/ryan-pilar/image/upload/q_auto/v1671045789/presidents-coach/misc/mitch-field-crop-min_xl2ccx.png"
+            }
+            miscImg2={
+              "https://res.cloudinary.com/ryan-pilar/image/upload/q_auto/v1671047808/presidents-coach/media/mitch-horse-2-min_mlnobs.png"
+            }
+            miscImg3={
+              "https://res.cloudinary.com/ryan-pilar/image/upload/q_auto/v1671044807/presidents-coach/misc/mitch-concert-singing-min_zjekzh.jpg"
+            }
+            miscImg4={
+              "https://res.cloudinary.com/ryan-pilar/image/upload/q_auto/v1671045274/presidents-coach/media/horse-head-tilt-min_stsywk.png"
+            }
+          />
           <Icons />
-          <Blogs />
+          <Blogs 
+            instaImage={"https://res.cloudinary.com/ryan-pilar/image/upload/q_auto/v1671045604/presidents-coach/misc/damian-min_j0lmzx.jpg"}
+            blogImage={"https://res.cloudinary.com/ryan-pilar/image/upload/q_auto/v1668475225/presidents-coach/misc/ashim_qkzynr.jpg"}
+            instaImage2={"https://res.cloudinary.com/ryan-pilar/image/upload/q_auto/v1671045582/presidents-coach/misc/beautiful-young-girl-with-longboard-sunny-weather_Medium_-min_mkkv9w.jpg"}
+            blogImage2={"https://res.cloudinary.com/ryan-pilar/image/upload/q_auto/v1671045290/presidents-coach/media/horse-laughing-min_mk4jqj.jpg"}
+          />
           {/* <Cards /> */}
-          <Testimonials1 />
+          <Testimonials1 
+            testimonialImg={"https://res.cloudinary.com/ryan-pilar/image/upload/q_auto/v1671045741/presidents-coach/testimonials/fezbot-min_kds4cn.jpg"}
+            testimonialImg2={"https://res.cloudinary.com/ryan-pilar/image/upload/q_auto/v1668474982/presidents-coach/testimonials/brooke-cagle_b1j3gl.jpg"}
+            testimonialImg3={"https://res.cloudinary.com/ryan-pilar/image/upload/q_auto/v1671045701/presidents-coach/testimonials/josh-appel-min_fce79m.jpg"}
+            testimonialImg4={"https://res.cloudinary.com/ryan-pilar/image/upload/q_auto/v1668475374/presidents-coach/testimonials/lucy_nxqpfy.jpg"}
+          />
 
           <br></br>
           <br></br>

@@ -8,14 +8,14 @@ import SocialExample from "components/feed/SocialExample";
 import SocialExample2 from "components/feed/SocialExample2";
 
 
-function Blogs() {
+function Blogs({instaImage, blogImage, instaImage2, blogImage2}) {
   const socialCard1 = (
     <Card className="card-blog card-background" data-animation="zooming">
       <div
         className="full-background"
         style={{
           backgroundImage:
-            "url(" + require("assets/img/sections/damian.jpg") + ")",
+            "url(" + instaImage + ")",
         }}
       ></div>
 
@@ -38,7 +38,7 @@ function Blogs() {
         className="full-background"
         style={{
           backgroundImage:
-            "url(" + require("assets/img/sections/beautiful-sexy-young-girl-shorts-with-longboard-sunny-weather.jpg") + ")",
+            "url(" + instaImage2 + ")",
         }}
       ></div>
       <a href="#pablo" onClick={(e) => e.preventDefault()}>
@@ -89,7 +89,7 @@ function Blogs() {
                   className="full-background"
                   style={{
                     backgroundImage:
-                      "url(" + require("assets/img/sections/ashim.jpg") + ")",
+                      "url(" + blogImage + ")",
                   }}
                 ></div>
                 <NavLink to={`/media/3c9XLwzmbcNvQQcHX6WjqC`}>
@@ -126,7 +126,7 @@ function Blogs() {
                   style={{
                     backgroundImage:
                       "url(" +
-                      require("assets/img/farm/horse-yelling.jpg") +
+                      blogImage2 +
                       ")",
                   }}
                 ></div>

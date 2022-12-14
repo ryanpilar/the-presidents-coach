@@ -21,7 +21,7 @@ function ProfileCardCoaching() {
                     customized landig messages for them. So if there were 3 programs, then there would be 4 unique messages
                 </p>
                 <p>    
-                  For those who know what they want, and all they want is to book me, go<a href="https://www.honeybook.com/"> here</a> (honeybook)
+                  For those who know what they want, and all they want is to book me, go<a href="https://www.honeybook.com/" target="_blank" aria-label={"book mitch through honeybook"}> here</a> (honeybook)
                 </p>
                 
                 {/* <Button

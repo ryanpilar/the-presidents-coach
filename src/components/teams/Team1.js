@@ -2,7 +2,6 @@ import React from "react";
 
 // reactstrap components
 import {
-
   CardTitle,
   Container,
   Row,
@@ -11,7 +10,26 @@ import {
   CarouselItem,
 } from "reactstrap";
 
-// Core Components
+
+
+function Team1({miscImg1, miscImg2, miscImg3, miscImg4}) {
+  
+  const [activeIndex, setActiveIndex] = React.useState(0);
+  const [animating, setAnimating] = React.useState(false);
+
+  const next = () => {
+    if (animating) return;
+    const nextIndex = activeIndex === items.length - 1 ? 0 : activeIndex + 1;
+    setActiveIndex(nextIndex);
+  };
+
+  const previous = () => {
+    if (animating) return;
+    const nextIndex = activeIndex === 0 ? items.length - 1 : activeIndex - 1;
+    setActiveIndex(nextIndex);
+  };
+
+  // Core Components
 
 const items = [
   {
@@ -23,7 +41,8 @@ const items = [
               <img
                 alt="..."
                 className="rounded shadow transform-perspective-left"
-                src={require("assets/img/ill/mitch-field-crop.png")}
+                // src={require("assets/img/ill/mitch-field-crop.png")}
+                src={miscImg1}
               ></img>
             </div>
           </Col>
@@ -33,102 +52,66 @@ const items = [
                 What Is It That You Want?
               </CardTitle>
               <div className="lead">
-
-              <ul className="list-unstyled mb-0">
-                <li className="py-1">
-                  <div className="d-flex align-items-center">
-                    <div>
-                      <i className="ni ni-check-bold mr-3 text-success"></i>
-                      {/* <i className="ni ni-bulb-61 mr-3 text-primary"></i> */}
-                      
+                <ul className="list-unstyled mb-0">
+                  <li className="py-1">
+                    <div className="d-flex align-items-center">
+                      <div>
+                        <i className="ni ni-check-bold mr-3 text-success"></i>
+                        {/* <i className="ni ni-bulb-61 mr-3 text-primary"></i> */}
+                      </div>
+                      <div>
+                        <p className="mb-1">To expand your business</p>
+                      </div>
                     </div>
-                    <div>
-                      <p className="mb-1">To expand your business</p>
+                  </li>
+                  <li className="py-1">
+                    <div className="d-flex align-items-center">
+                      <div>
+                        <i className="ni ni-check-bold mr-3 text-success"></i>
+                      </div>
+                      <div>
+                        <p className="mb-1">To reconcile with family</p>
+                      </div>
                     </div>
-                  </div>
-                </li>
-                <li className="py-1">
-                  <div className="d-flex align-items-center">
-                    <div>
-                      <i className="ni ni-check-bold mr-3 text-success"></i>
-                      {/* <i className="ni ni-bulb-61 mr-3 text-primary"></i> */}
-                      {/* <Badge className="badge-circle mr-3" color="info">
-                        <i className="ni ni-bulb-61"></i>
-                      </Badge> */}
+                  </li>
+                  <li className="py-1">
+                    <div className="d-flex align-items-center">
+                      <div>
+                        <i className="ni ni-check-bold mr-3 text-success"></i>
+                      </div>
+                      <div>
+                        <p className="mb-1">To sleep better</p>
+                      </div>
                     </div>
-                    <div>
-                      <p className="mb-1">To reconcile with family</p>
+                  </li>
+                  <li className="py-1">
+                    <div className="d-flex align-items-center">
+                      <div>
+                        <i className="ni ni-check-bold mr-3 text-success"></i>
+                      </div>
+                      <div>
+                        <p className="mb-1">
+                          To be able to spend a Sunday anxiety free...
+                        </p>
+                      </div>
                     </div>
-                  </div>
-                </li>
-                <li className="py-1">
-                  <div className="d-flex align-items-center">
-                    <div>
-                      <i className="ni ni-check-bold mr-3 text-success"></i>
-                      {/* <i className="ni ni-bulb-61 mr-3 text-primary"></i> */}
+                  </li>
+                  <li className="py-1">
+                    <div className="d-flex align-items-center">
+                      <div>
+                        <i className="ni ni-favourite-28 mr-3 text-danger"></i>
+                      </div>
+                      <div>
+                        <p className="mb-0">
+                          The highest level of leadership begins with the
+                          acceptance that you are the beacon for what you want
+                        </p>
+                      </div>
                     </div>
-                    <div>
-                      <p className="mb-1">To sleep better</p>
-                    </div>
-                  </div>
-                </li>
-                <li className="py-1">
-                  <div className="d-flex align-items-center">
-                    <div>
-                      <i className="ni ni-check-bold mr-3 text-success"></i>
-                      {/* <i className="ni ni-bulb-61 mr-3 text-primary"></i> */}
-                    </div>
-                    <div>
-                      <p className="mb-1">To be able to spend a Sunday anxiety free...</p>
-                    </div>
-                  </div>
-                </li>
-                <li className="py-1">
-                  <div className="d-flex align-items-center">
-                    <div>
-                      <i className="ni ni-favourite-28 mr-3 text-danger"></i>
-                      
-                    </div>
-                    <div>
-                      <p className="mb-0">The highest level of leadership begins with the acceptance that you are the beacon for what you want</p>
-                    </div>
-                  </div>
-                </li>
-                
-              </ul>
-              
-
+                  </li>
+                </ul>
               </div>
-              
-              {/* <div className="footer text-left">
-                <Button
-                  className="rounded-circle"
-                  color="twitter"
-                  href="#pablo"
-                  onClick={(e) => e.preventDefault()}
-                  size="sm"
-                >
-                  <i className="fab fa-twitter"></i>
-                </Button>
-                <Button
-                  className="rounded-circle"
-                  color="facebook"
-                  href="#pablo"
-                  onClick={(e) => e.preventDefault()}
-                  size="sm"
-                >
-                  <i className="fab fa-facebook-square"></i>
-                </Button>
-                <Button
-                  className="rounded-circle"
-                  color="dribbble"
-                  href="#pablo"
-                  onClick={(e) => e.preventDefault()}
-                  size="sm"
-                >
-                  <i className="fab fa-dribbble"></i>
-                </Button>
-              </div> */}
+
             </div>
           </Col>
         </Row>
@@ -147,7 +130,7 @@ const items = [
               <img
                 alt="..."
                 className="rounded shadow transform-perspective-left"
-                src={require("assets/img/farm/mitch-horse-2.png")}
+                src={miscImg2}
               ></img>
             </div>
           </Col>
@@ -174,61 +157,6 @@ const items = [
 
                 <p>❤️ ❤️ ❤️</p>
               </div>
-              {/* <ul className="list-unstyled mb-0">
-                <li className="py-1">
-                  <div className="d-flex align-items-center">
-                    <div>
-                      <Badge className="badge-circle mr-3" color="info">
-                        <i className="ni ni-atom"></i>
-                      </Badge>
-                    </div>
-                    <div>
-                      <p className="mb-1">Dedicated entrepreneur</p>
-                    </div>
-                  </div>
-                </li>
-                <li className="py-1">
-                  <div className="d-flex align-items-center">
-                    <div>
-                      <Badge className="badge-circle mr-3" color="success">
-                        <i className="ni ni-user-run"></i>
-                      </Badge>
-                    </div>
-                    <div>
-                      <p className="mb-1">Urban exploration</p>
-                    </div>
-                  </div>
-                </li>
-              </ul> */}
-              {/* <div className="footer text-left">
-                <Button
-                  className="rounded-circle"
-                  color="twitter"
-                  href="#pablo"
-                  onClick={(e) => e.preventDefault()}
-                  size="sm"
-                >
-                  <i className="fab fa-twitter"></i>
-                </Button>
-                <Button
-                  className="rounded-circle"
-                  color="facebook"
-                  href="#pablo"
-                  onClick={(e) => e.preventDefault()}
-                  size="sm"
-                >
-                  <i className="fab fa-facebook-square"></i>
-                </Button>
-                <Button
-                  className="rounded-circle"
-                  color="dribbble"
-                  href="#pablo"
-                  onClick={(e) => e.preventDefault()}
-                  size="sm"
-                >
-                  <i className="fab fa-dribbble"></i>
-                </Button>
-              </div> */}
             </div>
           </Col>
         </Row>
@@ -247,7 +175,7 @@ const items = [
               <img
                 alt="..."
                 className="rounded shadow transform-perspective-left"
-                src={require("assets/img/ill/mitch-concert-singing.jpg")}
+                src={miscImg3}
               ></img>
             </div>
           </Col>
@@ -255,116 +183,68 @@ const items = [
             <div className="wrapper p-md-0">
               <CardTitle tag="h1">You are a Goddamn Star</CardTitle>
               <div className="lead">
-                {/* <p><span className='mr-2'>⭐</span> My clients are featured in major publications.</p>
-
-                <p><span className='mr-2'>⭐</span> My clients become the presidents of their companies.</p>
-
-                <p><span className='mr-2'>⭐</span> My clients get promoted.</p>
-
-                <p><span className='mr-2'>⭐</span> My clients leave jobs they hate for jobs they love.</p>
-
-                <p><span className='mr-2'>⭐</span> My clients come off their meds.</p>
-
-                <p><span className='mr-2'>⭐</span> My clients sleep at night.</p> */}
-
-                {/* <p> My clients are featured in major publications.</p>
-
-                <p> My clients become the presidents of their companies.</p>
-
-                <p> My clients get promoted.</p>
-
-                <p> My clients leave jobs they hate for jobs they love.</p>
-
-                <p> My clients come off their meds.</p>
-
-                <p> My clients sleep at night.</p> */}
-
                 <ul className="list-unstyled mb-0">
-                {/* <li className="py-1">
-                  <div className="d-flex align-items-center">
-                    <div>
-                      <i className="ni ni-check-bold mr-3 text-success"></i>
-                      
+                  <li className="py-1">
+                    <div className="d-flex align-items-center">
+                      <div>
+                        <i className="ni ni-check-bold mr-3 text-success"></i>
+                      </div>
+                      <div>
+                        <p className="mb-1">
+                          My clients become the presidents of their companies
+                        </p>
+                      </div>
                     </div>
-                    <div>
-                      <p className="mb-1">My clients are featured in major publications</p>
-                    </div>
-                  </div>
-                </li> */}
-                <li className="py-1">
-                  <div className="d-flex align-items-center">
-                    <div>
-                      <i className="ni ni-check-bold mr-3 text-success"></i>
-                      {/* <i className="ni ni-bulb-61 mr-3 text-primary"></i> */}
-                      {/* <Badge className="badge-circle mr-3" color="info">
-                        <i className="ni ni-bulb-61"></i>
-                      </Badge> */}
-                    </div>
-                    <div>
-                      <p className="mb-1">My clients become the presidents of their companies</p>
-                    </div>
-                  </div>
-                </li>
-                {/* <li className="py-1">
-                  <div className="d-flex align-items-center">
-                    <div>
-                      <i className="ni ni-check-bold mr-3 text-success"></i>
-                    </div>
-                    <div>
-                      <p className="mb-1">My clients get promoted</p>
-                    </div>
-                  </div>
-                </li> */}
-                <li className="py-1">
-                  <div className="d-flex align-items-center">
-                    <div>
-                      <i className="ni ni-check-bold mr-3 text-success"></i>
-                      {/* <i className="ni ni-bulb-61 mr-3 text-primary"></i> */}
-                    </div>
-                    <div>
-                      <p className="mb-1">My clients leave jobs they hate for jobs they love</p>
-                    </div>
-                  </div>
-                </li>
-                <li className="py-1">
-                  <div className="d-flex align-items-center">
-                    <div>
-                      
-                      <i className="ni ni-check-bold mr-3 text-success"></i>
-                      
-                    </div>
-                    <div>
-                      <p className="mb-1">My clients come off their meds</p>
-                    </div>
-                  </div>
-                </li>
-                <li className="py-1">
-                  <div className="d-flex align-items-center">
-                    <div>
-                      <i className="ni ni-check-bold mr-3 text-success"></i>
-                      
-                      
-                    </div>
-                    <div>
-                      <p className="mb-1">My clients sleep at night</p>
-                    </div>
-                  </div>
-                </li>
-                <li className="py-1">
-                  <div className="d-flex align-items-center">
-                    <div>
-                      <i className="ni ni-favourite-28 mr-3 text-danger"></i>
-                      
-                      
-                    </div>
-                    <div>
-                      <p className="mb-1">Stop messin' around in that big beautiful brain of yours and get to life's soul expanding experiences. Because that's what you're here for!</p>
-                    </div>
-                  </div>
-                </li>
-                
-              </ul>
+                  </li>
 
+                  <li className="py-1">
+                    <div className="d-flex align-items-center">
+                      <div>
+                        <i className="ni ni-check-bold mr-3 text-success"></i>
+
+                      </div>
+                      <div>
+                        <p className="mb-1">
+                          My clients leave jobs they hate for jobs they love
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                  <li className="py-1">
+                    <div className="d-flex align-items-center">
+                      <div>
+                        <i className="ni ni-check-bold mr-3 text-success"></i>
+                      </div>
+                      <div>
+                        <p className="mb-1">My clients come off their meds</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li className="py-1">
+                    <div className="d-flex align-items-center">
+                      <div>
+                        <i className="ni ni-check-bold mr-3 text-success"></i>
+                      </div>
+                      <div>
+                        <p className="mb-1">My clients sleep at night</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li className="py-1">
+                    <div className="d-flex align-items-center">
+                      <div>
+                        <i className="ni ni-favourite-28 mr-3 text-danger"></i>
+                      </div>
+                      <div>
+                        <p className="mb-1">
+                          Stop messin' around in that big beautiful brain of
+                          yours and get to life's soul expanding experiences.
+                          Because that's what you're here for!
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
               </div>
             </div>
           </Col>
@@ -384,7 +264,7 @@ const items = [
               <img
                 alt="..."
                 className="rounded shadow transform-perspective-left"
-                src={require("assets/img/farm/horse-head-tilt.png")}
+                src={miscImg4}
               ></img>
             </div>
           </Col>
@@ -396,11 +276,15 @@ const items = [
 
                 <p>
                   When we stop assigning meaning and start accepting that, love
-                  & anger, time & timelessness, feeling unseen & hidden, can all be a part
-                  of the same experience… Then there is nothing to push against.
+                  & anger, time & timelessness, feeling unseen & hidden, can all
+                  be a part of the same experience… Then there is nothing to
+                  push against.
                 </p>
                 <p>
-                  <strong> And then we become the landing pad for peace.</strong>
+                  <strong>
+                    {" "}
+                    And then we become the landing pad for peace.
+                  </strong>
                 </p>
               </div>
             </div>
@@ -412,24 +296,7 @@ const items = [
     altText: "",
     caption: "",
   },
-  
 ];
-
-function Team1() {
-  const [activeIndex, setActiveIndex] = React.useState(0);
-  const [animating, setAnimating] = React.useState(false);
-
-  const next = () => {
-    if (animating) return;
-    const nextIndex = activeIndex === items.length - 1 ? 0 : activeIndex + 1;
-    setActiveIndex(nextIndex);
-  };
-
-  const previous = () => {
-    if (animating) return;
-    const nextIndex = activeIndex === 0 ? items.length - 1 : activeIndex - 1;
-    setActiveIndex(nextIndex);
-  };
   return (
     <>
       <section className="team-1">

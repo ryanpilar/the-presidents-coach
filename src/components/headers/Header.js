@@ -16,7 +16,7 @@ import SocialLinks from "components/feed/SocialLinks";
 
 // Core Components
 
-function Header1() {
+function Header1({bgImg, profileImg}) {
   return (
     <>
       <header className="header-1 ">
@@ -27,8 +27,9 @@ function Header1() {
               backgroundRepeat: "no-repeat",
               backgroundImage:
                 "url(" +
-                require("assets/img/ill/mitch-portrait-color.png") +
+                bgImg +
                 ")",
+              // backgroundImage: bgImg
             }}
           ></div>
           <Container>
@@ -76,7 +77,8 @@ function Header1() {
                             alt="..."
                             width={"25%"}
                             className="rounded-circle"
-                            src={require("assets/img/faces/mitch-mugshot.png")}
+                            // src={require("assets/img/faces/mitch-mugshot.png")}
+                            src={profileImg}
                           />
                         </a>
                         {/* </div> */}
