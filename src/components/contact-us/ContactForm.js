@@ -248,7 +248,7 @@ const ContactForm = ({autoMsg, includeTitle}) => {
         )}
 
         <FormGroup className={messageFocus}>
-          <label>Your message</label>
+          <label for="contact-us-message-1">Your message</label>
           <Input
             id="contact-us-message-1"
             name="message"

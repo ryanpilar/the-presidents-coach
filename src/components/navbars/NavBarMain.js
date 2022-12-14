@@ -61,8 +61,9 @@ function NavBarMain(props) {
             className="navbar-toggler"
             type="button"
             onClick={() => toggleCollapse(!collapseOpen)}
+            aria-label={"open menu"}
           >
-            <span className="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon" aria-hidden="true"></span>
           </button>
           <Collapse
             id="navbar_global"
