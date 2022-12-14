@@ -92,7 +92,7 @@ const SocialLinksMediaPost = ({ id, facebookHashtag, facebookQuote, twitterTitle
         Email
       </UncontrolledTooltip>
 
-      <a
+      <i
         className="fa fa-link pl-4"
         style={{ cursor: "pointer" }}
         onClick={ (event) => {
@@ -101,9 +101,9 @@ const SocialLinksMediaPost = ({ id, facebookHashtag, facebookQuote, twitterTitle
         }}
 
         aria-label="Copy Link Address"
-        id="tooltip56408132739"
+        id="tooltip564081327398"
       />
-      <UncontrolledTooltip delay={0} target="tooltip56408132739">
+      <UncontrolledTooltip delay={0} target="tooltip564081327398">
         Copy Link
       </UncontrolledTooltip>
 

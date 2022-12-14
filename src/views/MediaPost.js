@@ -48,7 +48,7 @@ function MediaPost() {
 
         renderNode: {
           "embedded-asset-block": (node) => (
-            <img width={`100%`} src={node.data.target.fields.file.url} alt="embedded contentful CMS image"/>
+            <img width={`100%`} src={node.data.target.fields.file.url} aria-hidden={true}/>
           ),
           [BLOCKS.QUOTE]: (node, children) => (
             <div className="p-4">
