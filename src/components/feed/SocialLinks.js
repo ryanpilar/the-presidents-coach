@@ -10,7 +10,7 @@ const SocialLinks = () => {
     <Button
         className="btn-icon-only rounded-circle"
         color="twitter"
-        id="tooltip46149983"
+        id="tooltip4614998322"
         href="mailto: mitch@mitchellcreasey.com"
         target="_blank"
         aria-label={"email the presidents coach"}
@@ -21,14 +21,14 @@ const SocialLinks = () => {
         </span>
       </Button>
 
-      <UncontrolledTooltip delay={0} target="tooltip46149983">
+      <UncontrolledTooltip delay={0} target="tooltip4614998322">
         Email
       </UncontrolledTooltip>
 
       <Button
         className="btn-icon-only rounded-circle"
         color="facebook"
-        id="tooltip564081339"
+        id="tooltip56408133923"
         href="https://www.facebook.com/coachmitchellcreasey/"
         target="_blank"
         aria-label={"connect with mitch on facebook"}
@@ -38,7 +38,7 @@ const SocialLinks = () => {
         </span>
       </Button>
       
-      <UncontrolledTooltip delay={0} target="tooltip564081339">
+      <UncontrolledTooltip delay={0} target="tooltip56408133923">
         Facbook
       </UncontrolledTooltip>
       

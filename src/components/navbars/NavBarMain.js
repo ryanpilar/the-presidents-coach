@@ -122,10 +122,11 @@ function NavBarMain(props) {
                       className="d-flex align-items-center"
                       to="/coaching/blue"
                       tag={Link}
+                      aria-label={"check out the blue coaching program"}
                     >
                       <div className="icon icon-shape icon-shape-info rounded-circle">
                         {/* <i class="ni ni-check-bold"></i> */}
-                        <i className="fab fa-patreon"></i>
+                        <i className="fab fa-patreon" aria-hidden="true"></i>
                         {/* <i className="ni ni-spaceship"></i> */}
                       </div>
                       <Media body className="ml-3">
@@ -142,9 +143,10 @@ function NavBarMain(props) {
                       className="d-flex align-items-center"
                       to="/coaching/green"
                       tag={Link}
+                      aria-label={"check out the green coaching program"}
                     >
                       <div className="icon icon-shape icon-shape-success rounded-circle">
-                        <i className="ni ni-spaceship"></i>
+                        <i className="ni ni-spaceship" aria-hidden="true"></i>
                       </div>
                       <Media body className="ml-3">
                         <h6 className="heading text-success mb-md-1">
@@ -160,9 +162,10 @@ function NavBarMain(props) {
                       className="d-flex align-items-center"
                       to="/coaching/orange"
                       tag={Link}
+                      aria-label={"check out the orange coaching program"}
                     >
                       <div className="icon icon-shape icon-shape-warning rounded-circle">
-                        <i className="ni ni-palette"></i>
+                        <i className="ni ni-palette" aria-hidden="true"></i>
                       </div>
                       <Media body className="ml-3">
                         <h6 className="heading text-warning mb-md-1">
@@ -187,25 +190,26 @@ function NavBarMain(props) {
                 <DropdownToggle
                   tag={NavLink}
                   data-toggle="dropdown"
-                  href="#pablo"
+                  href="#"
                   onClick={(e) => e.preventDefault()}
                   role="button"
+                  aria-label={"see mitch's media types"}
                 >
                   <i className="ni ni-button-play d-lg-none pr-2"></i>
                   <span className="nav-link-inner--text">Media</span>
                 </DropdownToggle>
                 <DropdownMenu aria-labelledby="navbarDropdownMenuLink">
 
-                  <DropdownItem href="https://www.patreon.com/" tag='a' target='_blank'>
+                  <DropdownItem href="https://www.patreon.com/" tag='a' target='_blank' rel="noreferrer">
                     <i className="fab fa-patreon text-danger"></i>
                     Patreon
                   </DropdownItem>
-                  <DropdownItem href="https://www.instagram.com/thepresidentscoach/" tag='a' target='_blank'>
+                  <DropdownItem href="https://www.instagram.com/thepresidentscoach/" tag='a' target='_blank' rel="noreferrer">
                     <i className="fab fa-instagram text-red"></i>
                     Instagram
                   </DropdownItem>
-                  <DropdownItem to="/media" tag={Link}>
-                    <i className="ni ni-button-play text-info"></i>
+                  <DropdownItem to="/media" tag={Link} aria-label={"mitch's media"}>
+                    <i className="ni ni-button-play text-info" aria-hidden="true"></i>
                     Mitch's Media 
                   </DropdownItem>
 
