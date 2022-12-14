@@ -2,9 +2,12 @@
 # 💼  the-presidents-coach
 
 ---
-![drapery](https://user-images.githubusercontent.com/102194829/198898881-5e9d8606-3cef-4c85-8793-3554129eb680.png)
+
+![mitch-head-shot-black](https://user-images.githubusercontent.com/102194829/207723849-8d51c9c6-c0c7-4a4d-8a49-1ff3a8743603.png)
 
 -- site under construction --
+
+https://the-presidents-coach.netlify.app/ 
 
 ---
 
