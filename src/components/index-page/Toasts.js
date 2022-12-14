@@ -1,7 +1,7 @@
 import React from "react";
 
 // reactstrap components
-import { Row, Col, Toast, ToastBody } from "reactstrap";
+import { Toast, ToastBody } from "reactstrap";
 
 // Core Components
 const prop = "primary"
@@ -16,7 +16,7 @@ const colors = [
   // "warning",
 ];
 
-function Toasts( { runToast, toastColor, closeToast }) {
+function Toasts( { toastColor, closeToast }) {
   return (
     <>
       {/* <Row className="justify-content-center">

@@ -1,9 +1,8 @@
 import React from "react";
 
 // reactstrap components
-import { Button, Label, FormGroup, Form, Input, Modal } from "reactstrap";
+import { Button, Modal } from "reactstrap";
 import ContactForm from "components/contact-us/ContactForm";
-import SocialLinks from "components/feed/SocialLinks";
 
 // Core Components
 

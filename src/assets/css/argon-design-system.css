@@ -18821,7 +18821,8 @@ hr {
   white-space: nowrap;
   display: flex;
   flex-wrap: nowrap;
-  will-change: transform; }
+  will-change: transform;
+ }
   .glide__slides .glide__slide {
     opacity: .1;
     transition: all .3s ease 0s; }

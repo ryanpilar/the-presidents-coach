@@ -2,22 +2,16 @@ import React from "react";
 
 // Core Components
 import NavBarMain from "components/navbars/NavBarMain.js";
-// import DemoFooter from "components/footers/DemoFooter.js";
 import DemoFooter from "components/footers/Footer6.js";
-import Header1 from "components/headers/Header1.js";
 import Header from "components/headers/Header.js";
 import Team1 from "components/teams/Team1.js";
-import Feature6 from "components/features/Feature6.js";
 import Feature7 from "components/features/Feature7.js";
 import Blogs from "components/blogs/Blogs.js";
-import Pricing5 from "components/pricings/Pricing5.js";
 
-import Cards from "components/presentation-page/Cards";
 import Icons from "components/presentation-page/Icons";
 import Testimonials1 from "components/testimonials/Testimonials1";
 import Contact from "components/contact-us/Contact";
 
-import Header6 from "components/headers/Header6";
 import SEO from "components/seo/SEO";
 
 import { useParams } from "react-router-dom";

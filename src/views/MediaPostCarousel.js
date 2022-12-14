@@ -8,10 +8,14 @@ const MediaPostCarousel = ( {imageCarousel} ) => {
         React.useEffect(() => {
             new Glide(".glide", {
               type: "carousel",
-              startAt: 0,
+              startAt: 1,
               focusAt: 2,
               perTouch: 1,
-              perView: 4,
+              perView: 5,
+              hoverpause: true,
+              autoplay: 6000,
+              keyboard: true,
+              // gap: 10,
             }).mount();
 
             document.body.classList.add("blog-post");
@@ -33,10 +37,12 @@ const MediaPostCarousel = ( {imageCarousel} ) => {
               <ul className="glide__slides">
 
                 
-
+                {console.log('tester', imageCarousel[0])}
                 <li className="glide__slide">
                   <img
-                    alt="..."
+                    alt={imageCarousel[0].context.custom.alt}
+                    caption={imageCarousel[0].context.custom.caption}
+                    data-pin-description={imageCarousel[0].context.custom.datapin}
                     height="500"
                     src={imageCarousel[0].secure_url}
                     // src={require("assets/img/theme/sofia-kuniakina.jpg")}
@@ -45,7 +51,9 @@ const MediaPostCarousel = ( {imageCarousel} ) => {
                 </li>
                 <li className="glide__slide">
                   <img
-                    alt="..."
+                    alt={imageCarousel[1].context.custom.alt}
+                    caption={imageCarousel[1].context.custom.caption}
+                    data-pin-description={imageCarousel[1].context.custom.datapin}
                     height="500"
                     src={imageCarousel[1].secure_url}
                     // src={require("assets/img/theme/sacha-styles.jpg")}
@@ -54,7 +62,9 @@ const MediaPostCarousel = ( {imageCarousel} ) => {
                 </li>
                 <li className="glide__slide">
                   <img
-                    alt="..."
+                    alt={imageCarousel[2].context.custom.alt}
+                    caption={imageCarousel[2].context.custom.caption}
+                    data-pin-description={imageCarousel[2].context.custom.datapin}
                     height="500"
                     src={imageCarousel[2].secure_url}
                     // src={require("assets/img/theme/victor-garcia.jpg")}
@@ -63,7 +73,9 @@ const MediaPostCarousel = ( {imageCarousel} ) => {
                 </li>
                 <li className="glide__slide">
                   <img
-                    alt="..."
+                    alt={imageCarousel[3].context.custom.alt}
+                    caption={imageCarousel[3].context.custom.caption}
+                    data-pin-description={imageCarousel[3].context.custom.datapin}
                     height="500"
                     src={imageCarousel[3].secure_url}
                     // src={require("assets/img/theme/doyoun-seo.jpg")}
@@ -72,7 +84,9 @@ const MediaPostCarousel = ( {imageCarousel} ) => {
                 </li>
                 <li className="glide__slide">
                   <img
-                    alt="..."
+                    alt={imageCarousel[4].context.custom.alt}
+                    caption={imageCarousel[4].context.custom.caption}
+                    data-pin-description={imageCarousel[4].context.custom.datapin}
                     height="500"
                     src={imageCarousel[4].secure_url}
                     // src={require("assets/img/theme/ayo-ogunseinde.jpg")}

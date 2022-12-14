@@ -1,37 +1,12 @@
 import React, { useState, useEffect } from "react";
 
-// reactstrap components
-// import {
-//
-// } from "reactstrap";
-
 import { useParams } from 'react-router-dom';          // useParams allows the '/post/:id' to work
 
 // Core Components
 import NavBarMain from "components/navbars/NavBarMain.js";
-// import DemoFooter from "components/footers/DemoFooter.js";
-// import DemoFooter from "components/footers/Footer6.js";
 import DemoFooter from "components/footers/DemoFooter.js";
 import HeaderError from "components/headers/HeaderError.js";
-import Table1 from "components/tables/Table1";
-import Programs2 from "components/presentation-page/Programs2";
-import Accordion1 from "components/accordions/Accordion1";
-// import HeaderPresentation from "components/headers/HeaderPresentation.js";
-import Header2 from "components/headers/Header2.js";
-import PricingCoaching from "components/pricings/PricingCoaching";
-import Feature2 from "components/features/Feature2";
-import Team1 from "components/teams/Team1.js"
-import Feature6 from "components/features/Feature6.js";
-import Programs from "components/features/Programs.js";
-import Blogs from "components/blogs/Blogs.js";
-import Pricing5 from "components/pricings/Pricing5.js";
 
-import Cards from "components/presentation-page/Cards";
-import Icons from "components/presentation-page/Icons";
-import Testimonials1 from "components/testimonials/Testimonials1";
-import Contact from "components/contact-us/ContactUs4"
-
-import Header6 from "components/headers/Header6";
 
 import SEO from "components/seo/SEO";
 

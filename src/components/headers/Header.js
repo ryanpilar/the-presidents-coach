@@ -3,12 +3,6 @@ import { Link } from "react-router-dom";
 // reactstrap components
 import {
   Button,
-  UncontrolledCollapse,
-  NavbarBrand,
-  Navbar,
-  NavItem,
-  NavLink,
-  Nav,
   Container,
   Row,
   Col,
@@ -16,7 +10,6 @@ import {
   CardBody,
   CardText,
   CardTitle,
-  UncontrolledTooltip,
 } from "reactstrap";
 
 import NavBarMain from "components/navbars/NavBarMain";

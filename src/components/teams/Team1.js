@@ -2,8 +2,7 @@ import React from "react";
 
 // reactstrap components
 import {
-  Badge,
-  Button,
+
   CardTitle,
   Container,
   Row,

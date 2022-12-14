@@ -6,13 +6,9 @@ import {
   Card,
   CardHeader,
   CardBody,
-  Form,
-  Input,
-  Media,
   Row,
   Col,
   UncontrolledTooltip,
-  PaginationLink,
 } from "reactstrap";
 
 // Core Components
@@ -21,9 +17,8 @@ function SocialExample2( {instaLink} ) {
   return (
     <>
       <Card>
-        {/* <CardHeader>
-          <h5 className="h3 mb-0">Activity feed</h5>
-        </CardHeader> */}
+
+
         <CardHeader className="d-flex align-items-center">
           <div className="d-flex align-items-center">
             <a href="#pablo" onClick={(e) => e.preventDefault()}>
@@ -182,86 +177,8 @@ function SocialExample2( {instaLink} ) {
               </div>
             </Col>
           </Row>
-          {/* <div className="mb-1">
-            <Media className="media-comment">
-              <img
-                alt="..."
-                className="media-comment-avatar rounded-circle"
-                src={require("assets/img/faces/team-1.jpg")}
-              ></img>
-              <Media>
-                <div className="media-comment-text">
-                  <h6 className="h5 mt-0">Michael Lewis</h6>
-                  <p className="text-sm lh-160">
-                    You have the opportunity to play this game of life you need
-                    to appreciate every moment. A lot of people don’t appreciate
-                    the moment until it’s passed.
-                  </p>
-                  <div className="icon-actions">
-                    <a
-                      className="like active"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      <i className="ni ni-like-2"></i>
-                      <span className="text-muted">3 likes</span>
-                    </a>
-                    <a href="#pablo" onClick={(e) => e.preventDefault()}>
-                      <i className="ni ni-curved-next"></i>
-                      <span className="text-muted">2 shares</span>
-                    </a>
-                  </div>
-                </div>
-              </Media>
-            </Media>
-            <Media className="media-comment">
-              <img
-                alt="..."
-                className="media-comment-avatar rounded-circle"
-                src={require("assets/img/faces/team-2.jpg")}
-              ></img>
-              <Media>
-                <div className="media-comment-text">
-                  <h6 className="h5 mt-0">Jessica Stones</h6>
-                  <p className="text-sm lh-160">
-                    I always felt like I could do anything. That’s the main
-                    thing people are controlled by! Thoughts- their perception
-                    of themselves! They're slowed down.
-                  </p>
-                  <div className="icon-actions">
-                    <a
-                      className="like active"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      <i className="ni ni-like-2"></i>
-                      <span className="text-muted">10 likes</span>
-                    </a>
-                    <a href="#pablo" onClick={(e) => e.preventDefault()}>
-                      <i className="ni ni-curved-next"></i>
-                      <span className="text-muted">1 share</span>
-                    </a>
-                  </div>
-                </div>
-              </Media>
-            </Media>
-            <Media className="align-items-center mt-5">
-              <img
-                alt="..."
-                className="avatar avatar-lg rounded-circle mb-4"
-                src={require("assets/img/faces/team-3.jpg")}
-              ></img>
-              <Media body>
-                <Form>
-                  <Input
-                    placeholder="Write your comment"
-                    rows="1"
-                    type="textarea"
-                  ></Input>
-                </Form>
-              </Media>
-            </Media>
-          </div> */}
+
+
         </CardBody>
       </Card>
     </>

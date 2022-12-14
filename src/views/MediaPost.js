@@ -9,7 +9,7 @@ import HeaderMediaPost from "components/headers/HeaderMediaPost.js";
 import NavBarMain from "components/navbars/NavBarMain.js";
 
 import { createClient } from "contentful";
-import { NavLink, useParams } from "react-router-dom"; // useParams allows the '/post/:id' to work
+import { useParams } from "react-router-dom"; // useParams allows the '/post/:id' to work
 
 // import { EmailShareButton, FacebookShareButton, LinkedinShareButton, TwitterShareButton } from "react-share";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
@@ -18,12 +18,6 @@ import MediaPostCarousel from "./MediaPostCarousel";
 import Badge from "reactstrap/lib/Badge";
 import SEO from "components/seo/SEO";
 
-import {
-  EmailShareButton,
-  FacebookShareButton,
-  LinkedinShareButton,
-  TwitterShareButton,
-} from "react-share";
 import SocialLinksMediaPost from "components/feed/SocialLinksMediaPost";
 
 function MediaPost() {
@@ -59,10 +53,10 @@ function MediaPost() {
           [BLOCKS.QUOTE]: (node, children) => (
             <div className="p-4">
               <blockquote className="blockquote">
-                <p className="m-4">
-                  <i className="fa fa-quote-right text-primary"></i>
+                <span className="p pt-2">
+                  <i className="fa fa-quote-right text-primary "></i>
                   {children}
-                </p>
+                </span>
               </blockquote>
             </div>
           ),
@@ -136,11 +130,7 @@ function MediaPost() {
             showIntroText={mediaPost.showIntroText}
           />
         )}
-{/* <Container>
-<Row>
-              <Col className="mx-auto" md="8">Home / Media / {id}</Col>
-            </Row>
-</Container> */}
+
         <section className="section mb-0 pb-0">
           <Container>
             
@@ -174,44 +164,33 @@ function MediaPost() {
                 {mediaPost.bodyTextStart &&
                   richTextConversion(mediaPost.bodyTextStart)}
               </Col>
-              {/* <Col className="mx-auto text-right" md="8">
-                <Badge pill color="secondary" className="badge-lg mb-2">
-                  Share This Post<i className="fa fa-arrow-down pl-1"></i>
-                </Badge>{" "}
-                <SocialLinksMediaPost
-                  id={id}
-                  className="border-bottom"
-                  facebookHashtag={"thepresidentscoach"}
-                  facebookQuote={mediaPost.metaDescription}
-                  twitterTitle={mediaPost.title}
-                  twitterHashtag={"thepresidentscoach"}
-                  linkedinTitle={mediaPost.title}
-                  linkedinSummary={mediaPost.metaDescription}
-                  emailSubject={mediaPost.title}
-                />
-              </Col> */}
+
             </Row>
           </Container>
         </section>
 
-        <section>
+        {/* -- IMAGE CAROUSEL --  */}
+        <section >
           {mediaPost.showImgCarousel && imageCarousel && (
-            <Row>
-              <Col>
+            
+            <Row md='10'>
+              <Col className="mx-auto" >
                 <MediaPostCarousel imageCarousel={imageCarousel} />
               </Col>
             </Row>
+
+            
+            
           )}
         </section>
 
-        <section className="section mt-5 pt-4">
+        <section className="section mt-6 pt-5">
           <Container>
             <Row>
               <Col className="mx-auto" md="8">
                 {mediaPost.bodyTextEnd && (
                   <>
                     {richTextConversion(mediaPost.bodyTextEnd)}
-                    {/* {console.log(mediaPost.bodyTextEnd)} */}
                   </>
                 )}
               </Col>
@@ -235,16 +214,6 @@ function MediaPost() {
             </Row>
           </Container>
         </section>
-
-        {/* <section className="section pt-0 mt-0">
-        <Container >
-            <Row>
-              <Col className="mx-auto" md="8">
-                <SocialLinksMediaPost />
-              </Col>
-            </Row>
-          </Container>
-        </section> */}
 
         <DemoFooter />
       </div>

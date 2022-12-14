@@ -6,13 +6,9 @@ import {
   Card,
   CardHeader,
   CardBody,
-  Form,
-  Input,
-  Media,
   Row,
   Col,
   UncontrolledTooltip,
-  PaginationLink,
 } from "reactstrap";
 
 // Core Components
@@ -21,9 +17,8 @@ function SocialExample( {instaLink} ) {
   return (
     <>
       <Card>
-        {/* <CardHeader>
-          <h5 className="h3 mb-0">Activity feed</h5>
-        </CardHeader> */}
+
+
         <CardHeader className="d-flex align-items-center">
           <div className="d-flex align-items-center">
             <a href="#pablo" onClick={(e) => e.preventDefault()}>

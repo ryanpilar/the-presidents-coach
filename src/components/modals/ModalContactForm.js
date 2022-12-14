@@ -1,10 +1,5 @@
 import React from "react";
 
-// reactstrap components
-import {
-  Container, Row, Col
-} from "reactstrap";
-
 // Core Components
 import ModalMessage from "components/modals/ModalMessage.js";
 

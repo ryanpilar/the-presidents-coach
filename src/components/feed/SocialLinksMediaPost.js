@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, UncontrolledTooltip } from "reactstrap";
+import { UncontrolledTooltip } from "reactstrap";
 import Toasts from "components/index-page/Toasts";
 import {
   EmailShareButton,

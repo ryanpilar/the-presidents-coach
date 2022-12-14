@@ -2,7 +2,6 @@ import React from "react";
 // reactstrap components
 import {
   Button,
-  Card,
   CardHeader,
   CardBody,
   CardTitle,
@@ -12,10 +11,8 @@ import {
   InputGroupAddon,
   InputGroupText,
   InputGroup,
-  Container,
   Row,
   Col,
-  UncontrolledTooltip,
 } from "reactstrap";
 
 const ContactForm = ({autoMsg, includeTitle}) => {
