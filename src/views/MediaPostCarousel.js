@@ -3,7 +3,6 @@ import Glide from "@glidejs/glide";
 
 const MediaPostCarousel = ( {imageCarousel} ) => {
     
-    const [reloadGlide, setReloadGlide] = React.useState(0)
     
         React.useEffect(() => {
             new Glide(".glide", {

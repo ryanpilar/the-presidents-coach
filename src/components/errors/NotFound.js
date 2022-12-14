@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 
-import { useParams } from 'react-router-dom';          // useParams allows the '/post/:id' to work
+// import { useParams } from 'react-router-dom';          // useParams allows the '/post/:id' to work
 
 // Core Components
 import NavBarMain from "components/navbars/NavBarMain.js";
@@ -12,67 +12,67 @@ import SEO from "components/seo/SEO";
 
 function NotFound() {
 
-  const [clickedProgram, setClickedProgram] = useState({color: useParams().color})
+  // const [clickedProgram, setClickedProgram] = useState({color: useParams().color})
 
-  const [icons, setIcons] = useState({
-    on: "fas fa-star",
-    off: "fas fa-chevron-circle-down",
-  })
+  // const [icons, setIcons] = useState({
+  //   on: "fas fa-star",
+  //   off: "fas fa-chevron-circle-down",
+  // })
 
-  const [iconStyle, setIconStyle] = useState({
-    onIcon: {
-      background: 'transparent',
-      // boxShadow: "0 5px 10px rgba(0,0,0,.2)",
-      textShadow: '2px 2px 4px rgba(0,0,0,.6)',
-      padding: '1rem .5rem 0 2rem',},
+  // const [iconStyle, setIconStyle] = useState({
+  //   onIcon: {
+  //     background: 'transparent',
+  //     // boxShadow: "0 5px 10px rgba(0,0,0,.2)",
+  //     textShadow: '2px 2px 4px rgba(0,0,0,.6)',
+  //     padding: '1rem .5rem 0 2rem',},
 
-    offIcon: {
-      padding: '1rem .5rem 0 1.8rem', 
-      paddingLeft: 'auto', 
-      color:'#d2d2d2'
-    },
+  //   offIcon: {
+  //     padding: '1rem .5rem 0 1.8rem', 
+  //     paddingLeft: 'auto', 
+  //     color:'#d2d2d2'
+  //   },
       
-  })
-  const [ isGlowing, setIsGlowing ] = useState({
-    coachOne: false,
-    coachTwo: false,
-    coachThree: false,
-  })
+  // })
+  // const [ isGlowing, setIsGlowing ] = useState({
+  //   coachOne: false,
+  //   coachTwo: false,
+  //   coachThree: false,
+  // })
 
-  const [ glowCards, setGlowCards ] = useState({
-    glowColor: '#ff68a2',
-    ribbonColor: '#f29dc0',
+  // const [ glowCards, setGlowCards ] = useState({
+  //   glowColor: '#ff68a2',
+  //   ribbonColor: '#f29dc0',
 
-    coachOne: {
-      isGlowing: false,
-      ribbonBorder: '#a0ebf8',
-    },
-    coachTwo: {
-      isGlowing: true,
-      ribbonBorder: '#a9ecd0',
-    },
-    coachThree: {
-      isGlowing: false,
-      ribbonBorder: '#fdc5b8',
-    },
-  })
+  //   coachOne: {
+  //     isGlowing: false,
+  //     ribbonBorder: '#a0ebf8',
+  //   },
+  //   coachTwo: {
+  //     isGlowing: true,
+  //     ribbonBorder: '#a9ecd0',
+  //   },
+  //   coachThree: {
+  //     isGlowing: false,
+  //     ribbonBorder: '#fdc5b8',
+  //   },
+  // })
 
 
 
-  const changeGlow = (searchTerm) => {
-    console.log('eeeee', searchTerm)
-    resetGlow(searchTerm)
+  // const changeGlow = (searchTerm) => {
+  //   console.log('eeeee', searchTerm)
+  //   resetGlow(searchTerm)
 
-    if (searchTerm === 'coachOne') {setIsGlowing({coachOne: !isGlowing.coachOne})}
-    if (searchTerm === 'coachTwo') {setIsGlowing({coachTwo: !isGlowing.coachTwo})}
-    if (searchTerm === 'coachThree') {setIsGlowing({coachThree: !isGlowing.coachThree})}
+  //   if (searchTerm === 'coachOne') {setIsGlowing({coachOne: !isGlowing.coachOne})}
+  //   if (searchTerm === 'coachTwo') {setIsGlowing({coachTwo: !isGlowing.coachTwo})}
+  //   if (searchTerm === 'coachThree') {setIsGlowing({coachThree: !isGlowing.coachThree})}
  
-  }
-  const resetGlow = (e) => {
-    setIsGlowing({coachOne: false})
-    setIsGlowing({coachTwo: false})
-    setIsGlowing({coachThree: false})
-  }
+  // }
+  // const resetGlow = (e) => {
+  //   setIsGlowing({coachOne: false})
+  //   setIsGlowing({coachTwo: false})
+  //   setIsGlowing({coachThree: false})
+  // }
 
   useEffect(() => {
     document.body.classList.add("profile-page");
@@ -92,27 +92,27 @@ function NotFound() {
     };
   });
   
-  useEffect( () => {
-    const setUsersChoice = () => {
+  // useEffect( () => {
+  //   const setUsersChoice = () => {
     
      
-      if (clickedProgram.color === 'blue') {
-        setIsGlowing({coachOne: true})
-      }
-      else if (clickedProgram.color === 'green') {
-        setIsGlowing({coachTwo: true})
-      } 
-      else if (clickedProgram.color === 'orange') {
-      setIsGlowing({coachThree: true})
-      }
-      else {
+  //     if (clickedProgram.color === 'blue') {
+  //       setIsGlowing({coachOne: true})
+  //     }
+  //     else if (clickedProgram.color === 'green') {
+  //       setIsGlowing({coachTwo: true})
+  //     } 
+  //     else if (clickedProgram.color === 'orange') {
+  //     setIsGlowing({coachThree: true})
+  //     }
+  //     else {
         
-      }
-    }
+  //     }
+  //   }
 
-    setUsersChoice()
+  //   setUsersChoice()
 
-  }, []) 
+  // }, []) 
  
 
   return (
@@ -121,7 +121,6 @@ function NotFound() {
       {/* SEO w/ React Helmet */}
       <SEO
         title={`The President's Coach | 404 Error, Ooops!`}
-        // title={`Curated Coaching Programs`}
         description={
           "Mitch is an award winning executive coach"
         }

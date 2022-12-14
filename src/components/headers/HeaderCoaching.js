@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 // reactstrap components
 import {
 
@@ -9,7 +8,7 @@ import {
 
 
 // Core Components
-import DemoFooter from "components/footers/DemoFooter.js";
+
 import ProfileCardCoaching from "components/cards/ProfileCardCoaching.js";
 
 // Core Components

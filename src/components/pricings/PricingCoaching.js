@@ -17,7 +17,7 @@ import IconsPricing from "components/presentation-page/IconsPricing";
 // Core Components
 
 function PricingCoaching({ icons, iconStyle, glow, isGlowing, changeGlow }) {
-  const [activeTab, setActiveTab] = React.useState("tab1");
+
   return (
     <>
       <IconsPricing />

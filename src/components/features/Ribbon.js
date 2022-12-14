@@ -11,7 +11,7 @@ function Ribbon({ name, changeGlow, icon, toggle }) {
           fontSize: toggle ? "1.75rem" : "1rem",
           color: toggle ? "#ffe333" : "grey",
 
-          position: "relative",
+          // position: "relative",
           minWidth: "15%",
           height: "15%",
           margin: "1.5rem 1rem 0 0",

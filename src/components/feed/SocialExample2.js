@@ -61,7 +61,8 @@ function SocialExample2( {instaLink} ) {
         </CardHeader>
         <CardBody>
 
-          <a href={instaLink} target={'_blank'}>
+          <a href={instaLink} target={'_blank'}
+          rel="noreferrer">
             <img
               alt="..."
               className="img-fluid rounded"
@@ -111,15 +112,18 @@ function SocialExample2( {instaLink} ) {
                   className="like active"
                   href={instaLink}
                   target='_blank'
+                  rel="noreferrer"
                 >
                   <i className="ni ni-like-2"></i>
                   <span className="text-muted">70</span>
                 </a>
-                <a target='_blank'href={instaLink} >
+                <a target='_blank' href={instaLink} 
+                rel="noreferrer">
                   <i className="ni ni-chat-round"></i>
                   <span className="text-muted">12</span>
                 </a>
-                <a target='_blank'href={instaLink} >
+                <a target='_blank' href={instaLink} 
+                rel="noreferrer">
                   <i className="ni ni-curved-next"></i>
                   <span className="text-muted">5</span>
                 </a>

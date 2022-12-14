@@ -2,14 +2,9 @@ import React from "react";
 
 // reactstrap components
 import {
-  Button,
-  FormGroup,
-  Form,
-  Input,
-  NavLink,
+
   Container,
   Row,
-  Col,
 } from "reactstrap";
 
 // Core Components
@@ -112,7 +107,7 @@ function Footer6() {
                   onMouseOut={({ target }) => (target.style.color = "#515357")}
                 />{" "}
                 by{" "}
-                <a href="https://ryan-pilar.netlify.app/" target="_blank">
+                <a href="https://ryan-pilar.netlify.app/" target="_blank" rel="noreferrer">
                   ryanpilar
                 </a>
                 .

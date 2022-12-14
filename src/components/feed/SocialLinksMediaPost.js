@@ -8,14 +8,10 @@ import {
   TwitterShareButton,
 } from "react-share";
 
-const SocialLinksMediaPost = ({ id, showToast, facebookHashtag, facebookQuote, twitterTitle, twitterHashtag, linkedinTitle, linkedinSummary, emailSubject }) => {
+const SocialLinksMediaPost = ({ id, facebookHashtag, facebookQuote, twitterTitle, twitterHashtag, linkedinTitle, linkedinSummary, emailSubject }) => {
   const [toastBoolean, setToastBoolean] = React.useState(false)
 
   const blogRoute = `http://the-presidents-coach.netlify.app/media/${id}`;
-
-  const toggleToast = () => {
-    setToastBoolean( preValue => !preValue)
-  }
 
   const closeToast = () => {
     setToastBoolean(false)
@@ -44,7 +40,7 @@ const SocialLinksMediaPost = ({ id, showToast, facebookHashtag, facebookQuote, t
         id="tooltip5226408871339"
       >
 
-        <a className="fab fa-facebook" aria-label="Share to Facebook" />
+        <i className="fab fa-facebook" aria-label="Share to Facebook" />
 
         <UncontrolledTooltip delay={0} target="tooltip5226408871339">
           Facebook
@@ -59,7 +55,7 @@ const SocialLinksMediaPost = ({ id, showToast, facebookHashtag, facebookQuote, t
         aria-label="Share to Twitter"
         id="tooltip52264081339"
       >
-        <a className="fab fa-twitter" aria-label="Share to Twitter" />
+        <i className="fab fa-twitter" aria-label="Share to Twitter" />
 
         <UncontrolledTooltip delay={0} target="tooltip52264081339">
           Twitter
@@ -74,7 +70,7 @@ const SocialLinksMediaPost = ({ id, showToast, facebookHashtag, facebookQuote, t
         url={blogRoute}
         id="tooltip56408133999"
       >
-        <a className="fab fa-linkedin" aria-label="Share to LinkedIn" />
+        <i className="fab fa-linkedin" aria-label="Share to LinkedIn" />
 
 
         <UncontrolledTooltip delay={0} target="tooltip56408133999">
@@ -90,7 +86,7 @@ const SocialLinksMediaPost = ({ id, showToast, facebookHashtag, facebookQuote, t
         url={blogRoute}
         id={"tooltip84449743555"}
       >
-        <a className="fa fa-envelope" aria-label="Share to Email" />
+        <i className="fa fa-envelope" aria-label="Share to Email" />
       </EmailShareButton>
       <UncontrolledTooltip delay={0} target="tooltip84449743555">
         Email

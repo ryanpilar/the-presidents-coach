@@ -43,15 +43,15 @@ const ContactForm = ({autoMsg, includeTitle}) => {
   const [messageFocus, setMessageFocus] = React.useState("");
   // conditionals to decide what SEND button to display
   const isErrors = () => {
-    if (formData.errors.firstName != "") {
+    if (formData.errors.firstName !== "") {
       setSendState(false);
-    } else if (formData.errors.lastName != "") {
+    } else if (formData.errors.lastName !== "") {
       setSendState(false);
-    } else if (formData.errors.email != "") {
+    } else if (formData.errors.email !== "") {
       setSendState(false);
-    } else if (formData.errors.phone != "") {
+    } else if (formData.errors.phone !== "") {
       setSendState(false);
-    } else if (formData.errors.message != "") {
+    } else if (formData.errors.message !== "") {
       setSendState(false);
     } else {
       setSendState(true);
@@ -185,7 +185,7 @@ const ContactForm = ({autoMsg, includeTitle}) => {
                 ></Input>
               </InputGroup>
             </FormGroup>
-            {formData.errors.firstName != "" && (
+            {formData.errors.firstName !== "" && (
               <p className="text-danger">
                 {alertIcon}
                 {formData.errors.firstName}
@@ -213,7 +213,7 @@ const ContactForm = ({autoMsg, includeTitle}) => {
                 ></Input>
               </InputGroup>
             </FormGroup>
-            {formData.errors.lastName != "" && (
+            {formData.errors.lastName !== "" && (
               <p className="text-danger">
                 {alertIcon}
                 {formData.errors.lastName}
@@ -240,7 +240,7 @@ const ContactForm = ({autoMsg, includeTitle}) => {
             ></Input>
           </InputGroup>
         </FormGroup>
-        {formData.errors.email != "" && (
+        {formData.errors.email !== "" && (
           <p className="text-danger">
             {alertIcon}
             {formData.errors.email}
@@ -260,7 +260,7 @@ const ContactForm = ({autoMsg, includeTitle}) => {
             onChange={handleChange}
           ></Input>
         </FormGroup>
-        {formData.errors.message != "" && (
+        {formData.errors.message !== "" && (
           <p className="text-danger">
             {alertIcon}
             {formData.errors.message}

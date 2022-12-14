@@ -1,5 +1,5 @@
 import React from "react";
-import GitHubButton from "react-github-button";
+
 // reactstrap components
 import {
   Badge,

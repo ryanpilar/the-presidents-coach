@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+
 // reactstrap components
 import {
 
@@ -9,7 +9,6 @@ import {
 
 
 // Core Components
-import DemoFooter from "components/footers/DemoFooter.js";
 import ProfileCardError from "components/cards/ProfileCardError";
 // Core Components
 

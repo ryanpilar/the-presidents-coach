@@ -43,15 +43,15 @@ function Home() {
 
   const [appData, setAppData] = React.useState(null)
 
-  const callBackendAPI = async () => {
-    const response = await fetch('/app');
-    const body = await response.json();
+  // const callBackendAPI = async () => {
+  //   const response = await fetch('/app');
+  //   const body = await response.json();
 
-    if (response.status !== 200) {
-      throw Error(body.message) 
-    }
-    return body;
-  };
+  //   if (response.status !== 200) {
+  //     throw Error(body.message) 
+  //   }
+  //   return body;
+  // };
 
   // React.useEffect(() => {
   //   callBackendAPI()

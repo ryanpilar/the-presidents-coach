@@ -24,8 +24,8 @@ function MediaPost() {
   const { id } = useParams(); // grabs the contentful :id form the address bar
   const [mediaPost, setMediaPost] = React.useState([]);
   const [imageCarousel, setImageCarousel] = React.useState();
-  const [listNodes, setListNodes] = React.useState(null);
 
+  
   const client = createClient({
     space: process.env.REACT_APP_CONTENTFUL_SPACE,
     accessToken: process.env.REACT_APP_CONTENTFUL_TOKEN,
@@ -48,7 +48,7 @@ function MediaPost() {
 
         renderNode: {
           "embedded-asset-block": (node) => (
-            <img width={`100%`} src={node.data.target.fields.file.url} />
+            <img width={`100%`} src={node.data.target.fields.file.url} alt="embedded contentful CMS image"/>
           ),
           [BLOCKS.QUOTE]: (node, children) => (
             <div className="p-4">

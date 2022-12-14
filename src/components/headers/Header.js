@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+
 // reactstrap components
 import {
   Button,
@@ -12,8 +12,6 @@ import {
   CardTitle,
 } from "reactstrap";
 
-import NavBarMain from "components/navbars/NavBarMain";
-import ProfileCardMedia from "components/cards/ProfileCardMedia";
 import SocialLinks from "components/feed/SocialLinks";
 
 // Core Components

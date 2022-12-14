@@ -15,7 +15,7 @@ import { NavLink } from 'react-router-dom'
 import { createClient } from "contentful";
 
 function Blogs1() {
-  const [mediaList, setMediaList] = React.useState([]);
+  // const [mediaList, setMediaList] = React.useState([]);
   const [correctSize, setCorrectSize] = React.useState(null);
   
 
@@ -35,7 +35,7 @@ function Blogs1() {
     };
 
     const updated = content.map((item, index) => {
-      if (counter == 0) {
+      if (counter === 0) {
         isSmall = !isSmall;
         counter = 2;
       }
